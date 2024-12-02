@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>世界前十死亡率分布</title>
+                <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts.min.js"></script>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/maps/world.js"></script>
+
+</head>
+<body >
+    <div id="3a015614c3574adaac8a96de29abc207" class="chart-container" style="width:1000px; height:600px; "></div>
+    <script>
+        var chart_3a015614c3574adaac8a96de29abc207 = echarts.init(
+            document.getElementById('3a015614c3574adaac8a96de29abc207'), 'white', {renderer: 'canvas'});
+        var option_3a015614c3574adaac8a96de29abc207 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+    ],
+    "series": [
+        {
+            "type": "map",
+            "name": "\u4e16\u754c\u524d\u5341\u6b7b\u4ea1\u7387",
+            "label": {
+                "show": true,
+                "margin": 8,
+                "valueAnimation": false
+            },
+            "map": "world",
+            "data": [
+                {
+                    "name": "Lithuania",
+                    "value": 14.053680360442453
+                },
+                {
+                    "name": "Ukraine",
+                    "value": 13.988514204474308
+                },
+                {
+                    "name": "Bulgaria",
+                    "value": 13.895170066916199
+                },
+                {
+                    "name": "Central African Republic",
+                    "value": 13.635840348698176
+                },
+                {
+                    "name": "Lesotho",
+                    "value": 13.478635183224231
+                },
+                {
+                    "name": "Latvia",
+                    "value": 13.404806253899183
+                },
+                {
+                    "name": "Belarus",
+                    "value": 12.922743929893805
+                },
+                {
+                    "name": "Chad",
+                    "value": 12.799917257485887
+                },
+                {
+                    "name": "Russia",
+                    "value": 12.633634550324617
+                },
+                {
+                    "name": "Cyprus",
+                    "value": 12.603654799450503
+                }
+            ],
+            "roam": true,
+            "aspectScale": 0.75,
+            "nameProperty": "name",
+            "selectedMode": false,
+            "zoom": 1,
+            "zlevel": 0,
+            "z": 2,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "mapValueCalculation": "sum",
+            "showLegendSymbol": true,
+            "emphasis": {}
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "\u4e16\u754c\u524d\u5341\u6b7b\u4ea1\u7387"
+            ],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "title": [
+        {
+            "show": true,
+            "text": "\u4e16\u754c\u524d\u5341\u6b7b\u4ea1\u7387\u5206\u5e03",
+            "target": "blank",
+            "subtarget": "blank",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ],
+    "visualMap": {
+        "show": true,
+        "type": "continuous",
+        "min": 12.603654799450503,
+        "max": 14.053680360442453,
+        "textStyle": {
+            "color": "#000"
+        },
+        "inRange": {
+            "color": [
+                "#50a3ba",
+                "#eac763",
+                "#d94e5d"
+            ]
+        },
+        "calculable": true,
+        "inverse": false,
+        "splitNumber": 5,
+        "hoverLink": true,
+        "orient": "vertical",
+        "padding": 5,
+        "showLabel": true,
+        "itemWidth": 20,
+        "itemHeight": 140,
+        "borderWidth": 0
+    }
+};
+        chart_3a015614c3574adaac8a96de29abc207.setOption(option_3a015614c3574adaac8a96de29abc207);
+    </script>
+</body>
+</html>
