@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>主界面</title>
+    <style>
+        h1, a {
+            color: white;
+        }
+        a {
+            text-decoration: none;
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background-color: #160b47;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        a:hover {
+            background-color: #350341;
+        }
+        html, body {
+            margin: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        body {
+            background-image: url('/static/test.gif');
+            background-repeat: no - repeat;
+            background-position: center center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: white;">欢迎来到主界面</h1>
+    <a href="/图片展示" style="color: white;">图片展示</a><br>
+    <a href="/推荐系统" style="color: white;">推荐系统</a>
+</body>
+
+</html>

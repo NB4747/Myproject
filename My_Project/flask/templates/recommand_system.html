@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>职位推荐</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url('/static/test.gif');
+            background-repeat: no - repeat;
+            background-position: center center;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        form {
+            width: 300px;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        label {
+            color: white;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="submit"] {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        input[type="text"] {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        input[type="submit"] {
+            background-color: #160b47;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #350341;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>职位推荐系统</h1>
+    <form method="post">
+        <label for="city">工作地点：</label>
+        <input type="text" id="city" name="city" required><br>
+        <label for="degree">学历：</label>
+        <input type="text" id="degree" name="degree" required><br>
+        <label for="experience">工作经验：</label>
+        <input type="text" id="experience" name="experience" required><br>
+        <label for="keywords">关键字（多个关键字用逗号分隔）：</label>
+        <input type="text" id="keywords" name="keywords" required><br>
+        <input type="submit" value="提交">
+    </form>
+</body>
+
+</html>

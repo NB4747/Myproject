@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>图片跳转示例</title>
+    <style>
+        /* 整体页面样式 */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url('/static/test.gif'); /* 假设背景图名为background.gif，你可按需替换 */
+            background-repeat: no - repeat;
+            background-position: center center;
+        }
+
+        /* 标题文字样式 */
+        h1 {
+            color: white;
+        }
+
+        /* 按钮通用样式 */
+        button {
+            text-decoration: none;
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background-color: #160b47;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            color: white; /* 设置按钮文字颜色为白色 */
+            border: none; /* 去除按钮默认边框 */
+            cursor: pointer; /* 鼠标悬停变为手型指针 */
+        }
+
+        /* 鼠标悬停在按钮上的样式变化 */
+        button:hover {
+            background-color: #350341;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>图片跳转</h1>
+    <button onclick="goToCitySizeSalary()">公司规模与平均薪资关系箱线图</button><br>
+    <button onclick="goToCompanyBenefit()">出现次数大于8000的福利词汇分布</button><br>
+    <button onclick="goToIfHaveBenefit()">有福利和无福利的公司占比</button><br>
+    <button onclick="goToJobDegreeBar()">不同学历薪资情况</button><br>
+    <button onclick="goToJobDegreePie()">各学历在职位中的占比情况</button><br>
+    <button onclick="goToJobExp()">各学历在职位中的占比情况</button><br>
+    <button onclick="goToKeyCityPro()">各省份关键字总和占比情况</button><br>
+    <button onclick="goToKeyCiyun()">各关键字在各省份出现次数之和词云</button><br>
+    <button onclick="goToKeySalary()">各关键字平均薪资柱状图</button><br>
+    <button onclick="goToStatickeywordCountChart()">各关键字在职位相关列中出现次数统计</button><br>
+    <button onclick="goToCityAvgSalaryBar()">各城市平均薪资柱形图</button><br>
+    <button onclick="goToCityDistrictAvgSalaryBar()">各市区平均薪资柱形图</button><br>
+    <button onclick="goToAvgSalary()">平均薪资</button><br>
+
+    <script>
+        function goToCitySizeSalary() {
+            window.location.href = "{{ url_for('static', filename='city_size_salary.png') }}";
+        }
+        function goToCompanyBenefit() {
+            window.location.href = "{{ url_for('static', filename='company_benefit.png') }}";
+        }
+        function goToIfHaveBenefit() {
+            window.location.href = "{{ url_for('static', filename='if_have_benefit.png') }}";
+        }
+        function goToJobDegreeBar() {
+            window.location.href = "{{ url_for('static', filename='job_degree_bar.png') }}";
+        }
+        function goToJobDegreePie() {
+            window.location.href = "{{ url_for('static', filename='job_degree_pie.png') }}";
+        }
+        function goToJobExp() {
+            window.location.href = "{{ url_for('static', filename='job_exp.png') }}";
+        }
+        function goToKeyCityPro() {
+            window.location.href = "{{ url_for('static', filename='key_city_pro.png') }}";
+        }
+        function goToKeyCiyun() {
+            window.location.href = "{{ url_for('static', filename='key_ciyun.png') }}";
+        }
+        function goToKeySalary() {
+            window.location.href = "{{ url_for('static', filename='key_salary.png') }}";
+        }
+        function goToStatickeywordCountChart() {
+            window.location.href = "{{ url_for('static', filename='statickeyword_count_chart.png') }}";
+        }
+        function goToCityAvgSalaryBar() {
+            window.location.href = "{{ url_for('static', filename='各城市平均薪资柱形图.html') }}";
+        }
+        function goToCityDistrictAvgSalaryBar() {
+            window.location.href = "{{ url_for('static', filename='各市区平均薪资柱形图.html') }}";
+        }
+        function goToAvgSalary() {
+            window.location.href = "{{ url_for('static', filename='平均薪资.html') }}";
+        }
+    </script>
+</body>
+
+</html>

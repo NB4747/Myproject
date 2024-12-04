@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>职位推荐结果</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url('/static/test.gif');
+            background-repeat: no - repeat;
+            background-position: center center;
+        }
+        h1, h2 {
+            text-align: center;
+            color: white;
+        }
+        table {
+            margin: 20px auto;
+            border-collapse: collapse; /* 合并边框 */
+            border: 2px solid white; /* 整体表格边框加粗 */
+        }
+        th, td {
+            color: white;
+            border: 2px solid white; /* 表头和单元格边框加粗 */
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>推荐岗位列表</h1>
+    <table border="1">
+        <tr>
+            <th>职位名称</th>
+            <th>公司名称</th>
+            <th>工作地点</th>
+            <th>平均薪资</th>
+        </tr>
+        {% for index, row in recommended_jobs.iterrows() %}
+        <tr>
+            <td>{{ row['职位名称'] }}</td>
+            <td>{{ row['company_name'] }}</td>
+            <td>{{ row['city'] }}</td>
+            <td>{{ row['Avg_salary'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% if company_median_salary %}
+    <h2>根据中位数挑选的公司</h2>
+    <table border="1">
+        <tr>
+            <th>职位名称</th>
+            <th>公司名称</th>
+            <th>工作地点</th>
+            <th>平均薪资</th>
+        </tr>
+        <tr>
+            <td>{{ company_median_salary['职位名称'] }}</td>
+            <td>{{ company_median_salary['company_name'] }}</td>
+            <td>{{ company_median_salary['city'] }}</td>
+            <td>{{ company_median_salary['Avg_salary'] }}</td>
+        </tr>
+    </table>
+    {% endif %}
+    {% if company_max_salary %}
+    <h2>根据最大值挑选的公司</h2>
+    <table border="1">
+        <tr>
+            <th>职位名称</th>
+            <th>公司名称</th>
+            <th>工作地点</th>
+            <th>平均薪资</th>
+        </tr>
+        <tr>
+            <td>{{ company_max_salary['职位名称'] }}</td>
+            <td>{{ company_max_salary['company_name'] }}</td>
+            <td>{{ company_max_salary['city'] }}</td>
+            <td>{{ company_max_salary['Avg_salary'] }}</td>
+        </tr>
+    </table>
+    {% endif %}
+    {% if company_min_salary %}
+    <h2>根据最小值挑选的公司</h2>
+    <table border="1">
+        <tr>
+            <th>职位名称</th>
+            <th>公司名称</th>
+            <th>工作地点</th>
+            <th>平均薪资</th>
+        </tr>
+        <tr>
+            <td>{{ company_min_salary['职位名称'] }}</td>
+            <td>{{ company_min_salary['company_name'] }}</td>
+            <td>{{ company_min_salary['city'] }}</td>
+            <td>{{ company_min_salary['Avg_salary'] }}</td>
+        </tr>
+    </table>
+    {% endif %}
+</body>
+
+</html>
